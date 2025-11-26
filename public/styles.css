@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+body { 
+    font-family: 'Roboto', sans-serif; 
+}
+
+/* Custom Input Styles */
+.auth-input-container:focus-within {
+    border-color: #22d3ee; /* cyan-400 */
+    border-width: 2px;
+}
+
+/* Toggle Switch Styles */
+.toggle-checkbox:checked {
+    right: 0;
+    border-color: #22d3ee;
+}
+.toggle-checkbox:checked + .toggle-label {
+    background-color: #22d3ee;
+}
+
+/* Clean Input Styles for Create Post */
+.create-input {
+    width: 100%;
+    outline: none;
+    background: transparent;
+    resize: none;
+}
+
+/* Animación para fade-in */
+@keyframes fade-in {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+    animation: fade-in 0.5s ease-out;
+}
+
+/* Evitar que se rompa el layout en grid */
+.break-inside-avoid {
+    break-inside: avoid;
+}
+
+/* Media Query para móvil */
+@media (max-width: 1000px) {
+    body, #root {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    main, header, footer, div, section {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
